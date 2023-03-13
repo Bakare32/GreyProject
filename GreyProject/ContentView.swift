@@ -2,20 +2,69 @@
 //  ContentView.swift
 //  GreyProject
 //
-//  Created by USER on 13/03/2023.
+//  Created by BAKARE WARIS on 13/03/2023.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var userViewModel = UserViewModel()
+    @State private var searchText: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchText, onTextChanged: searchMovies)
+                if searchText == "" {
+                    List {
+                        Section() {
+                            ForEach(userViewModel.users) { user in
+                                NavigationLink(destination: DetailsView(user: user)) {
+                                    UserRow(user: user)
+                                }
+                            }
+                            
+                            Section() {
+                                LoaderView(isFailed: userViewModel.isRequestFailed)
+                                    .onAppear(perform: fetchData)
+                                    .onTapGesture(perform: onTapLoadView)
+                            }
+                        }
+                    }
+                } else {
+                    List {
+                        ForEach(userViewModel.users.filter {
+                            self.searchText.isEmpty ? true : $0.name.lowercased().contains(self.searchText.lowercased())
+                        }) { user in
+                            NavigationLink(destination: DetailsView(user: user)) {
+                                UserRow(user: user)
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+            .listStyle(.plain)
+            .navigationTitle("Github Users")
         }
-        .padding()
+    }
+    
+    private func fetchData() {
+        userViewModel.getUsers()
+    }
+    
+    private func onTapLoadView() {
+        if userViewModel.isRequestFailed {
+            userViewModel.isRequestFailed = false
+            fetchData()
+        }
+    }
+    
+    func searchMovies(for searchText: String) {
+        if !searchText.isEmpty {
+            userViewModel.getSearch(text: searchText)
+        }
     }
 }
 
@@ -24,3 +73,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

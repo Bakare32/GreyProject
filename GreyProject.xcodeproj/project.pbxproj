@@ -14,6 +14,15 @@
 		CEF7BAE629BF6B3A00465679 /* GreyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BAE529BF6B3A00465679 /* GreyProjectTests.swift */; };
 		CEF7BAF029BF6B3A00465679 /* GreyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BAEF29BF6B3A00465679 /* GreyProjectUITests.swift */; };
 		CEF7BAF229BF6B3A00465679 /* GreyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BAF129BF6B3A00465679 /* GreyProjectUITestsLaunchTests.swift */; };
+		CEF7BB0029BF6C1700465679 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CEF7BAFF29BF6C1700465679 /* SDWebImageSwiftUI */; };
+		CEF7BB0329BF6CC900465679 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0229BF6CC900465679 /* LoaderView.swift */; };
+		CEF7BB0529BF6D0500465679 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0429BF6D0500465679 /* UserRow.swift */; };
+		CEF7BB0729BF6D2100465679 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0629BF6D2100465679 /* DetailsView.swift */; };
+		CEF7BB0929BF6D4100465679 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0829BF6D4100465679 /* SearchView.swift */; };
+		CEF7BB0C29BF6DBE00465679 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0B29BF6DBE00465679 /* APIService.swift */; };
+		CEF7BB0E29BF6DCC00465679 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB0D29BF6DCC00465679 /* APIError.swift */; };
+		CEF7BB1129BF6E2600465679 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB1029BF6E2600465679 /* UserViewModel.swift */; };
+		CEF7BB1429BF6E5600465679 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF7BB1329BF6E5600465679 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,14 @@
 		CEF7BAEB29BF6B3A00465679 /* GreyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF7BAEF29BF6B3A00465679 /* GreyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyProjectUITests.swift; sourceTree = "<group>"; };
 		CEF7BAF129BF6B3A00465679 /* GreyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEF7BB0229BF6CC900465679 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		CEF7BB0429BF6D0500465679 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		CEF7BB0629BF6D2100465679 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		CEF7BB0829BF6D4100465679 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		CEF7BB0B29BF6DBE00465679 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CEF7BB0D29BF6DCC00465679 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CEF7BB1029BF6E2600465679 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		CEF7BB1329BF6E5600465679 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF7BB0029BF6C1700465679 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +112,10 @@
 		CEF7BAD329BF6B3800465679 /* GreyProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEF7BB1229BF6E4500465679 /* Model */,
+				CEF7BB0F29BF6E0E00465679 /* ViewModel */,
+				CEF7BB0A29BF6DA300465679 /* NetworkManager */,
+				CEF7BB0129BF6C8600465679 /* Views */,
 				CEF7BAD429BF6B3800465679 /* GreyProjectApp.swift */,
 				CEF7BAD629BF6B3800465679 /* ContentView.swift */,
 				CEF7BAD829BF6B3A00465679 /* Assets.xcassets */,
@@ -127,6 +149,42 @@
 			path = GreyProjectUITests;
 			sourceTree = "<group>";
 		};
+		CEF7BB0129BF6C8600465679 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7BB0229BF6CC900465679 /* LoaderView.swift */,
+				CEF7BB0429BF6D0500465679 /* UserRow.swift */,
+				CEF7BB0629BF6D2100465679 /* DetailsView.swift */,
+				CEF7BB0829BF6D4100465679 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF7BB0A29BF6DA300465679 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7BB0B29BF6DBE00465679 /* APIService.swift */,
+				CEF7BB0D29BF6DCC00465679 /* APIError.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CEF7BB0F29BF6E0E00465679 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7BB1029BF6E2600465679 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEF7BB1229BF6E4500465679 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7BB1329BF6E5600465679 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +201,9 @@
 			dependencies = (
 			);
 			name = GreyProject;
+			packageProductDependencies = (
+				CEF7BAFF29BF6C1700465679 /* SDWebImageSwiftUI */,
+			);
 			productName = GreyProject;
 			productReference = CEF7BAD129BF6B3800465679 /* GreyProject.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +276,9 @@
 				Base,
 			);
 			mainGroup = CEF7BAC829BF6B3800465679;
+			packageReferences = (
+				CEF7BAFE29BF6C1700465679 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = CEF7BAD229BF6B3800465679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF7BAD729BF6B3800465679 /* ContentView.swift in Sources */,
+				CEF7BB0C29BF6DBE00465679 /* APIService.swift in Sources */,
+				CEF7BB0729BF6D2100465679 /* DetailsView.swift in Sources */,
 				CEF7BAD529BF6B3800465679 /* GreyProjectApp.swift in Sources */,
+				CEF7BB0329BF6CC900465679 /* LoaderView.swift in Sources */,
+				CEF7BB0E29BF6DCC00465679 /* APIError.swift in Sources */,
+				CEF7BB0929BF6D4100465679 /* SearchView.swift in Sources */,
+				CEF7BB1129BF6E2600465679 /* UserViewModel.swift in Sources */,
+				CEF7BB1429BF6E5600465679 /* User.swift in Sources */,
+				CEF7BB0529BF6D0500465679 /* UserRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEF7BAFE29BF6C1700465679 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEF7BAFF29BF6C1700465679 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF7BAFE29BF6C1700465679 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEF7BAC929BF6B3800465679 /* Project object */;
 }
